@@ -12,6 +12,15 @@ console.log("Sort numbers", numbers);
 console.log("Minumum number", minNumber);
 console.log("Maximum number", maxNumber);
 
+
+//Sort Number but 0 at the last
+input [10, 41, 0, 22, 15, 0, 66, 56]
+output [10, 15, 22, 41, 56, 66, 0, 0]
+
+const numbers = [10, 41, 0, 22, 15, 0, 66, 56];
+numbers.sort((a, b) => (a || Number.MAX_VALUE) - (b || Number.MAX_VALUE));
+console.log(...numbers);
+
 //Sort object by values
 let obj = [{name:"xyz"}, {name:"pqr"}, {name:"abc"}];
 obj.sort(function(a,b) {
