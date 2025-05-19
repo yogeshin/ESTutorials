@@ -7,15 +7,6 @@
   console.log(doubled); // [2, 4, 6, 8, 10]
 ```
 
-
-
-
-
-
-
-
-
-
 > This code snippet demonstrates how to **create a polyfill** for the ***Array.prototype.map*** method using ES6 syntax.
 > - The map method creates a new array populated with the results of calling a provided function on every element in the calling array.
 It is a higher-order function that takes a callback function as an argument and applies it to each element of the array.
