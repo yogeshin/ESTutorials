@@ -17,7 +17,7 @@ The polyfill uses the `this` keyword to refer to the array instance and iterates
 > - Polyfill for [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ```js
-Array.prototype.map = (callback) => {
+Array.prototype.mymap = function(callback) {
   const result = [];
   for (let i = 0; i < this.length; i++) {
     if (i in this) {
@@ -28,6 +28,6 @@ Array.prototype.map = (callback) => {
 };
 
 const numbers = [1, 2, 3, 4, 5];
-const doubled = numbers.map((number) => number * 2);
+const doubled = numbers.mymap((number) => number * 2);
 console.log(doubled); // [2, 4, 6, 8, 10]
 ```
